@@ -7,7 +7,7 @@ D:\library-content\ITPRO\Office-Web-Apps\Working\OfficeDocs-OfficeOnlineServer-T
 D:\library-content\ITPRO\Office-Web-Apps\Working\OfficeDocs-OfficeOnlineServer-Test-loc-pr\Web-Apps-Server-loc\remove-officewebappshost.md
 D:\library-content\ITPRO\Office-Web-Apps\Working\OfficeDocs-OfficeOnlineServer-Test-loc-pr\Web-Apps-Server-loc\https://docs.microsoft.com/en-us/powershell/module/officewebapps/remove-officewebappsmachine?view=officewebapps-ps
 D:\library-content\ITPRO\Office-Web-Apps\Working\OfficeDocs-OfficeOnlineServer-Test-loc-pr\Web-Apps-Server-loc\repair-officewebappsfarm.md
-D:\library-content\ITPRO\Office-Web-Apps\Working\OfficeDocs-OfficeOnlineServer-Test-loc-pr\Web-Apps-Server-loc\set-officewebappsfarm.md
+D:\library-content\ITPRO\Office-Web-Apps\Working\OfficeDocs-OfficeOnlineServer-Test-loc-pr\Web-Apps-Server-loc\https://docs.microsoft.com/en-us/powershell/module/officewebapps/set-officewebappsfarm?view=officewebapps-ps
 D:\library-content\ITPRO\Office-Web-Apps\Working\OfficeDocs-OfficeOnlineServer-Test-loc-pr\Web-Apps-Server-loc\set-officewebappsmachine.md
 D:\library-content\ITPRO\Office-Web-Apps\Working\OfficeDocs-OfficeOnlineServer-Test-loc-pr\Web-Apps-Server-loc\https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/?view=sharepoint-ps
 D:\library-content\ITPRO\Office-Web-Apps\Working\OfficeDocs-OfficeOnlineServer-Test-loc-pr\Web-Apps-Server-loc\https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/Get-SPWOPIBinding?view=sharepoint-ps

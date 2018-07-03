@@ -44,7 +44,7 @@ For exact details about your license, refer to the Microsoft Software License Te
 
 SharePoint 2013 provides new license enforcement that works with Office Web Apps. If you enable SharePoint licensing and then enable Office Web Apps editing, only the users who have the appropriate license can actually edit Office files in a browser. If no Office Web Apps editing licenses are applied for users, only viewing is supported.
 
-For more information about how licensing works in SharePoint 2013, see [Configure licensing in SharePoint Server 2013](https://technet.microsoft.com/en-us/library/jj219627\(v=office.15\)). The EditingEnabled parameter that enables editing is described in [New-OfficeWebAppsFarm](https://docs.microsoft.com/en-us/powershell/module/officewebapps/new-officewebappsfarm?view=officewebapps-ps) and [Set-OfficeWebAppsFarm](set-officewebappsfarm.md).
+For more information about how licensing works in SharePoint 2013, see [Configure licensing in SharePoint Server 2013](https://technet.microsoft.com/en-us/library/jj219627\(v=office.15\)). The EditingEnabled parameter that enables editing is described in [New-OfficeWebAppsFarm](https://docs.microsoft.com/en-us/powershell/module/officewebapps/new-officewebappsfarm?view=officewebapps-ps) and [Set-OfficeWebAppsFarm](https://docs.microsoft.com/en-us/powershell/module/officewebapps/set-officewebappsfarm?view=officewebapps-ps).
 
 Files that are sent by the Share by link feature in SharePoint 2013 can be edited in Office Web Apps even when no editing license is present and when editing is disabled for the Office Web Apps Server farm.
 
