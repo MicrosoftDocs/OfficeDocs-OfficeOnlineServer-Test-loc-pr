@@ -231,8 +231,9 @@ If Office Web Apps Server is working as expected, you should see a Web Applicati
 
 The farm is now ready to provide Office Web Apps functionality to hosts over HTTP. Visit [Configure Office Web Apps for SharePoint 2013](configure-office-web-apps-for-sharepoint-2013.md) for more information about how to configure hosts.
 
-<a name="singlehttps"> </a>
+
 ## Deploy a single-server Office Web Apps Server farm that uses HTTPS
+<a name="singlehttps"> </a>
 
 For most production environments, we strongly recommend the use of HTTPS for its security features. Also, HTTPS is required if you want to provide Office Web Apps Server functionality to Lync Server 2013, which lets users view PowerPoint broadcasts in a browser. Here’s how to install a single-server Office Web Apps Server farm that uses HTTPS. You'll need to install a certificate on the server as described in [Securing Office Web Apps Server communications by using HTTPS](plan-office-web-apps-server.md).
 
@@ -297,8 +298,8 @@ The farm is now ready to provide Office Web Apps functionality to hosts over HTT
 
   - [Deploying Office Web Apps Server and Lync Server 2013](https://go.microsoft.com/fwlink/p/?linkid=256902)
 
-<a name="multihttps"></a>
 ## Deploy a multi-server, load-balanced Office Web Apps Server farm that uses HTTPS
+<a name="multihttps"> </a>
 
 If you anticipate lots of traffic to your Office Web Apps Server farm, and you want it to be available over the Internet as well as on your internal network, this type of topology is the way to go. This section shows how to install a multi-server Office Web Apps Server farm that uses a load balancer and HTTPS. If you’re interested, [read more about this topology](plan-office-web-apps-server.md).
 
