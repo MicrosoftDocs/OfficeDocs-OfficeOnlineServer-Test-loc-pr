@@ -39,7 +39,7 @@ When used with SharePoint 2013 on-premises, Office Web Apps provides updated ver
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><a href="windows-powershell-for-office-web-apps-sharepoint-2013.md">Windows PowerShell for Office Web Apps (SharePoint 2013)</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/?view=sharepoint-ps">Windows PowerShell for Office Web Apps (SharePoint 2013)</a></p></td>
 <td><p>Lists the Windows PowerShell cmdlets for configure SharePoint 2013 to use Office Web Apps.</p></td>
 </tr>
 </tbody>
