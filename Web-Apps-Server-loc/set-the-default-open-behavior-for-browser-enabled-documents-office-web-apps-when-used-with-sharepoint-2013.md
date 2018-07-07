@@ -1,5 +1,5 @@
 ﻿---
-title: Set the default open behavior for browser-enabled documents (Office Web Apps when used with SharePoint 2013)
+title: Open behavior for browser-enabled documents in Office Web Apps
 TOCTitle: Set the default open behavior for browser enabled documents
 ms:assetid: e27e0bc8-5fb5-4bb1-8157-d7c90654175e
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ee837425(v=office.15)
