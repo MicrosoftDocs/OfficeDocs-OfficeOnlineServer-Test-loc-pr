@@ -8,9 +8,7 @@ ms.date: 10/13/2017
 mtps_version: v=office.15
 ---
 
-# Update-SPWOPIProofKey
-
- 
+# Update-SPWOPIProofKey 
 
 _**Applies to:** Office Web Apps, SharePoint Foundation 2013, SharePoint Server 2013_
 
@@ -19,7 +17,11 @@ Updates the public key that is used to connect to the WOPI application on the cu
 
 ## Syntax
 
-    Update-SPWOPIProofKey [-AssignmentCollection <SPAssignmentCollection>] [-ServerName <String>]
+```PowerShell
+    Update-SPWOPIProofKey 
+  [-AssignmentCollection <SPAssignmentCollection>] 
+  [-ServerName <String>]
+```
 
 ## Detailed Description
 
@@ -51,13 +53,11 @@ SharePoint Management Shell
 <td><p>Optional</p></td>
 <td><p>Microsoft.SharePoint.PowerShell.SPAssignmentCollection</p></td>
 <td><p>Manages objects for the purpose of proper disposal. Use of objects, such as <strong>SPWeb</strong> or <strong>SPSite</strong>, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the <strong>SPAssignment</strong> object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When <strong>SPWeb</strong>, <strong>SPSite</strong>, or <strong>SPSiteAdministration</strong> objects are used, the objects are automatically disposed of if an assignment collection or the <strong>Global</strong> parameter is not used.</p>
-<div class="alert">
 
 > [!NOTE]
 > When the <STRONG>Global</STRONG> parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the <STRONG>Stop-SPAssignment</STRONG> command, an out-of-memory scenario can occur.
 
-
-</div></td>
+</td>
 </tr>
 <tr class="even">
 <td><p><strong>ServerName</strong></p></td>
@@ -77,7 +77,9 @@ SharePoint Management Shell
 
 \--------------EXAMPLE-----------------
 
+```PowerShell
     Update-SPWOPIProofKey -ServerName "Server.corp.Contoso.com"
+```
 
 This example obtains the current public key from the WOPI application (such as a server that runs Office Web Apps Server) and updates the key that is stored on the SharePoint farm.
 
