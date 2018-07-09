@@ -77,8 +77,9 @@ Choose the procedure that corresponds to your server operating system.
 
 Run the following command, where \<WacServerName\> is the fully qualified domain name (FQDN) of the URL that you set for the internal URL. This is the point of entry for Office Web Apps Server traffic. For this test environment, you need to specify the –AllowHTTP parameter to allow SharePoint 2013 to receive discovery information from the Office Web Apps Server farm by using HTTP. If you don’t specify –AllowHTTP, SharePoint 2013 will try to use HTTPS to communicate with the Office Web Apps Server farm, and this command won’t work.
 
+```PowerShell
     New-SPWOPIBinding -ServerName <WacServerName> -AllowHTTP
-
+```
 After running this command, you should see a list of bindings displayed at the Windows PowerShell command prompt.
 
 Need help? See [New-SPWOPIBinding](https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/New-SPWOPIBinding?view=sharepoint-ps).
@@ -87,8 +88,9 @@ Need help? See [New-SPWOPIBinding](https://docs.microsoft.com/en-us/powershell/m
 
 Office Web Apps Server uses zones to determine which URL (internal or external) and which protocol (HTTP or HTTPS) to use when it communicates with the host, in this case, SharePoint 2013. By default, SharePoint Server 2013 uses the **internal-https** zone. Run the following command to see what your current zone is.
 
+```PowerShell
     Get-SPWOPIZone
-
+```
 The WOPI zone displayed by this command should be **internal-http**. If it’s displayed correctly, skip to step 5. If it isn’t, see the next step.
 
 Need help? See [Get-SPWOPIZone](https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/Get-SPWOPIZone?view=sharepoint-ps).
@@ -97,7 +99,9 @@ Need help? See [Get-SPWOPIZone](https://docs.microsoft.com/en-us/powershell/modu
 
 If the result from Step 3 was **internal-https**, run the following command to change the zone to **internal-http**. You need to make this change because the zone of SharePoint 2013 must match the zone of the Office Web Apps Server farm.
 
+```PowerShell
     Set-SPWOPIZone -zone "internal-http"
+```
 
 Verify that the new zone is **internal-http** by running **Get-SPWOPIZone** again.
 
@@ -107,19 +111,25 @@ Need help? See [Set-SPWOPIZone](https://docs.microsoft.com/en-us/powershell/modu
 
 To use Office Web Apps with SharePoint 2013 over HTTP in a test environment, you need to set AllowOAuthOverHttp to **True**. Otherwise Office Web Apps won’t work. You can check the current status by running the following example.
 
+```PowerShell
     (Get-SPSecurityTokenServiceConfig).AllowOAuthOverHttp
+```
 
 If this command returns **False**, run the following commands to set this to **True**.
 
+```PowerShell
     $config = (Get-SPSecurityTokenServiceConfig)
 
     $config.AllowOAuthOverHttp = $true
 
     $config.Update()
+```
 
 Run the following command again to verify that the AllowOAuthOverHttp setting is now set to **True**.
 
+```PowerShell
     (Get-SPSecurityTokenServiceConfig).AllowOAuthOverHttp
+```
 
 Need help? See [Get-SPSecurityTokenServiceConfig](https://technet.microsoft.com/en-us/library/ff607642\(v=office.15\)).
 
@@ -155,16 +165,18 @@ Choose the procedure that corresponds to your server operating system.
 
 Run the following command, where \<WacServerName\> is the fully qualified domain name (FQDN) of the URL that you set for the internal URL. This is the point of entry for Office Web Apps Server traffic.
 
+```PowerShell
     New-SPWOPIBinding -ServerName <WacServerName> 
-
+```
 Need help? See [New-SPWOPIBinding](https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/New-SPWOPIBinding?view=sharepoint-ps).
 
 ## Step 3: View the WOPI zone of SharePoint 2013
 
 Office Web Apps Server uses zones to determine which URL (internal or external) and which protocol (HTTP or HTTPS) to use when it communicates with the host, which in this case is SharePoint 2013. By default, SharePoint Server 2013 uses the **internal-https** zone. Verify that this is the current zone by running the following command.
 
+```PowerShell
     Get-SPWOPIZone
-
+```
 Take note of the WOPI zone that is displayed.
 
 Need help? See [Get-SPWOPIZone](https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/Get-SPWOPIZone?view=sharepoint-ps).
@@ -175,7 +187,9 @@ Depending on your environment, you might have to change the WOPI zone. If you ha
 
 If the results from Step 3 show that **internal-https** and the SharePoint farm is internal only, you can skip this step. If you have a SharePoint farm that’s internal and external, you need to run the following command to change the zone to **external-https**.
 
+```PowerShell
     Set-SPWOPIZone -zone "external-https"
+```
 
 Need help? See [Set-SPWOPIZone](https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/Set-SPWOPIZone?view=sharepoint-ps).
 
@@ -207,8 +221,9 @@ The authentication provider must be displayed as **Claims Based Authentication**
 
 To do this, run the following command on the SharePoint Server:
 
+```PowerShell
     Get-SPWopiZone 
-
+```
 The result will be one of the following:.
 
   - internal-https
@@ -221,8 +236,9 @@ The result will be one of the following:.
 
 Next, run the following command on the SharePoint Server.
 
+```PowerShell
     Get-SPWOPIBinding
-
+```
 In the output, look for **WopiZone: zone**. If the results from Get-SPWopiZone don’t match the zone that is returned by Get-SPWOPIBinding, run the **Set-SPWOPIZone -Zone** cmdlet on the SharePoint Server to change the WOPI zone to match the result from Get-SPWOPIBinding. For help with using these cmdlets, see [Get-SPWOPIBinding](https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/Get-SPWOPIBinding?view=sharepoint-ps), [Set-SPWOPIBinding](https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/Set-SPWOPIBinding?view=sharepoint-ps), and [Get-SPWOPIZone](https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/Get-SPWOPIZone?view=sharepoint-ps).
 
 ## Problem: You receive a “Sorry, this document can’t be opened for editing” error when you try to edit an Office document in Office Web Apps.
@@ -281,8 +297,9 @@ To enable people to interact with workbooks that contain a Data Model or Power V
 
 If, for any reason, you want to disconnect SharePoint 2013 from Office Web Apps Server, use the following command example.
 
+```PowerShell
     Remove-SPWOPIBinding -All:$true
-
+```
 Need help? See [Remove-SPWOPIBinding](https://docs.microsoft.com/en-us/powershell/module/sharepoint-server/Remove-SPWOPIBinding?view=sharepoint-ps).
 
 ## See also

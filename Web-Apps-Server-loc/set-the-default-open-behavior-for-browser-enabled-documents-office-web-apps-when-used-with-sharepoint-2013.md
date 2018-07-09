@@ -8,12 +8,9 @@ ms.date: 07/24/2014
 mtps_version: v=office.15
 ---
 
-# Set the default open behavior for browser-enabled documents (Office Web Apps when used with SharePoint 2013)
-
- 
+# Set the default open behavior for browser-enabled documents (Office Web Apps when used with SharePoint 2013) 
 
 _**Applies to:** SharePoint Server 2013, SharePoint Foundation 2013, Office Web Apps_
-
 
 **Summary:** Explains how to configure the default open behavior for Office documents in SharePoint site collections and document libraries.
 
@@ -104,24 +101,32 @@ Use one of the following procedures to set the OpenInClient feature in SharePoin
 3.  At the Windows PowerShell command prompt, type one of the following commands:
     
       - To enable the OpenInClient feature for a specific site collection (to open documents in the client application), type this command:
-        
+
+      ```PowerShell  
             Enable-SPFeature 8A4B8DE2-6FD8-41e9-923C-C7C3C00F8295 -url <SiteCollURL>
+      ```
         
         where \<SiteCollURL\> is the URL of the site collection.
     
       - To enable the OpenInClient feature for all site collections (to open documents in the client application), type this command:
-        
+
+      ```PowerShell        
             Get-SPSite -limit ALL |foreach{ Enable-SPFeature 8A4B8DE2-6FD8-41e9-923C-C7C3C00F8295 -url $_.URL }
+      ```
     
       - To disable the OpenInClient feature for a specific site collection (to open documents in the browser), type this command:
-        
+
+      ```PowerShell  
             Disable-SPFeature 8A4B8DE2-6FD8-41e9-923C-C7C3C00F8295 -url <SiteCollURL>
+      ```
         
         where \<SiteCollURL\> is the URL of the site collection.
     
       - To disable the OpenInClient feature for all site collections (to open documents in the browser), type this command:
-        
+
+      ```PowerShell  
             Get-SPSite -limit ALL |foreach{ Disable-SPFeature 8A4B8DE2-6FD8-41e9-923C-C7C3C00F8295 -url $_.URL }
+      ```
 
  **Set the default open behavior for a document library by using the document library settings page**
 
@@ -181,7 +186,9 @@ Use one of the following procedures to set the OpenInClient feature in SharePoin
 
 3.  At the Windows PowerShell command prompt, type this command:
     
+      ```PowerShell
         Get-SPWeb -site <SiteCollURL> | % {$_.Lists} | where {$_.IrmEnabled -eq $true} | % {$_.DefaultItemOpen =[Microsoft.Sharepoint.DefaultItemOpen]::<DefaultItemOpenSetting>; $_.Update()}
+      ```
     
     where:
     
