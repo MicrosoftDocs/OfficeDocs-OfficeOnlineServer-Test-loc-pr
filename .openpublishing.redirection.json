@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path": "Web-Apps-Server-loc/index.md",
+      "redirect_url": "office-web-apps-server",
+      "redirect_document_id": false
+    }
+  ]
+}
