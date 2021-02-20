@@ -106,7 +106,7 @@ Use one of the following procedures to set the OpenInClient feature in SharePoin
             Enable-SPFeature 8A4B8DE2-6FD8-41e9-923C-C7C3C00F8295 -url <SiteCollURL>
       ```
         
-        where \<SiteCollURL\> is the URL of the site collection.
+      where \<SiteCollURL\> is the URL of the site collection.
     
       - To enable the OpenInClient feature for all site collections (to open documents in the client application), type this command:
 
@@ -120,7 +120,7 @@ Use one of the following procedures to set the OpenInClient feature in SharePoin
             Disable-SPFeature 8A4B8DE2-6FD8-41e9-923C-C7C3C00F8295 -url <SiteCollURL>
       ```
         
-        where \<SiteCollURL\> is the URL of the site collection.
+       where \<SiteCollURL\> is the URL of the site collection.
     
       - To disable the OpenInClient feature for all site collections (to open documents in the browser), type this command:
 
